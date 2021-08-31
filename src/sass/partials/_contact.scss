@@ -1,0 +1,89 @@
+#contact {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/cafe.jpeg');
+	background-color: rgba(#000, .7);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+
+	.contact__header {
+		width: 100%;
+		height: 150px;
+		background-color: #5D320A;
+	}
+
+	.contact {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+		height: calc(100vh - 150px);
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+
+		&__address {
+			text-align: center;
+
+			h3 {
+				font-size: 64px;
+				font-family: $allison;
+				color: #fff;
+				font-weight: 600;
+				line-height: 60px;
+
+				@media (max-width: $tablet) {
+					font-size: 36px;
+				}
+			}
+
+			p {
+				font-family: $allison;
+				font-size: 48px;
+				font-weight: 400;
+				line-height: 60px;
+				color: #fff;
+
+				@media (max-width: $tablet) {
+					font-size: 28px;
+				}
+			}
+		}
+
+		&__info {
+			text-align: center;
+
+			h3 {
+				font-size: 64px;
+				font-family: $allison;
+				color: #fff;
+				font-weight: 600;
+				line-height: 60px;
+
+				@media (max-width: $tablet) {
+					font-size: 36px;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				cursor: text;
+				font-family: $allison;
+				font-size: 48px;
+				font-weight: 400;
+				line-height: 60px;
+				color: #fff;
+
+				@media (max-width: $tablet) {
+					font-size: 28px;
+				}
+			}
+
+		}
+	}
+}

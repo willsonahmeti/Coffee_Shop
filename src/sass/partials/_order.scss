@@ -1,0 +1,99 @@
+#order {
+	position: relative; 
+	background-image: url('../img/coffee.jpeg');
+	background-color: rgba(#000, .7);
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: overlay;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100vh;
+
+	.order {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 1000px;
+		width: 100%;
+
+		h4 {
+			text-align: center;
+			color: #fff;
+			font-family: $allison;
+			font-size: 64px;
+			line-height: 1;
+
+			@media (max-width: $tablet) {
+				font-size: 42px;
+			}
+		}
+
+		form { 
+			width: 100%;
+
+			.form-control {
+				font-family: $lato;
+				font-size: 24px;
+				font-style: italic;
+
+				@media (max-width: $tablet) {
+					font-size: 12px;
+				}
+
+				&:focus {
+				    border-color: #5d320a;
+				    color: #fff;
+				    box-shadow: 0 0 0 4px rgba(#5d320a, .5);
+				}	
+			}
+
+			.btn {
+				border: 2px solid #5d320a;
+
+				&-outline-light {
+					font-family: $lato;
+					font-size: 24px;
+					font-style: italic;
+
+					@media (max-width: $tablet) {
+						font-size: 12px;
+					}
+
+					&:hover {
+						color: #5d320a;
+					}
+
+					&:focus {
+					    border-color: #5d320a;
+					    box-shadow: 0 0 0 4px rgba(#5d320a, .5);
+					}
+				}
+			}
+		}
+
+		.card {
+			width: 100%;
+
+			.card-title {
+				@media (max-width: $tablet) {
+					font-size: 18px;
+				}
+			}
+
+			.card-text {
+				@media (max-width: $tablet) {
+					font-size: 12px;
+				}
+			}
+
+			.list-group {
+				.list-group-item {
+					@media (max-width: $tablet) {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}

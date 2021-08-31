@@ -1,0 +1,86 @@
+.footer {
+	position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+	a { text-decoration: none; }
+
+	.button {
+		display: flex;
+		flex-wrap: wrap;
+		width: 60px;
+		height: 60px;
+		background: #5d320a;
+		border-radius: 50px;
+		margin: 0 5px;
+		cursor: pointer;
+		overflow: hidden;
+		box-shadow: 0 10px 10px rgba(#5d320a, .5);
+		transition: all .3s ease-in-out;
+
+		@media (max-width: $tablet) {
+			width: 40px;
+			height: 40px;
+		}
+
+		&:hover {
+			width: 200px;
+			background: #fff;
+
+			@media (max-width: $tablet) {
+				width: 100px;
+			}
+
+			.icon {
+				background: #5d320a;
+			}
+		}
+
+		.icon {
+			display: flex;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			border: none;
+			border-radius: 50px;
+			box-sizing: border-box;
+			line-height: 60px;
+			transition: all .3s ease-in-out;
+
+			@media (max-width: $tablet) {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+			}
+
+			i {
+				text-align: center;
+				font-size: 25px;
+				color: #fff;
+				line-height: 60px;
+
+				@media (max-width: $tablet) {
+					line-height: 40px;
+					font-size: 18px;
+				}
+			}
+		}
+
+		span {
+			font-size: 20px;
+			font-weight: 600;
+			color: #5d320a;
+			line-height: 60px;
+			margin-left: 20px;
+
+			@media (max-width: $tablet) {
+				line-height: 40px;
+				font-size: 12px;
+				margin-left: 5px;
+			}
+		}
+	}
+}

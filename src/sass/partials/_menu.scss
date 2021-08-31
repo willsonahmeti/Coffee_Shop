@@ -1,0 +1,122 @@
+#menu {
+	width: 100%;
+	height: 100vh;
+	background-color: #9B6634;
+	position: relative;
+	display: flex;
+    flex-direction: column;
+
+	.menu__header {
+		margin-top: 150px;
+		width: 100%;
+
+		h1 {
+			text-align: center;
+			font-family: $allison;
+			font-size: 82px;
+			color: #fff;
+
+			@media (max-width: $tablet) {
+				font-size: 48px;
+			}
+		}
+	}
+
+	.slider {
+		width: 100%;
+		height: 400px;
+		z-index: 999;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.slick-prev, .slick-next {
+			background: #5D320A !important;
+			width: 40px;
+			height: 40px;
+			border-radius: 10px;
+			z-index: 1;
+
+			&:before {
+				width: 40px;
+				height: 40px;
+				border-radius: 10px;
+				z-index: 1;
+			}
+		}
+
+		.slick-prev {
+			left: 0 !important;
+		}
+
+		.slick-next {
+			right: 0 !important;
+		}
+	}
+
+	.menu {
+		background-color: transparent;
+    	max-width: 320px;
+    	width: 100%;
+    	height: 380px;
+    	overflow: hidden;
+    	margin: 20px 48px;
+		border-radius: 50px;
+		transform: scale(0.75);
+		transition: all .3s linear;
+		transition-delay: .5s;
+
+		&.slick-current {
+	    	transform: scale(1);
+
+	    	& > .card h2 {
+				display: none;
+			}	
+
+			& > .card:before {
+				background: transparent;
+				backdrop-filter: blur(0);
+			}
+		
+	    }
+
+		.card {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		    max-width: 320px;
+			width: 100%;
+			height: 380px;
+			background-position: center;
+			background-size: cover;
+			overflow: hidden;
+		    border: none;
+
+			&:before {
+				content: '';
+	   			background: rgba(0, 0, 0, 0.25);
+			    width: 320px;
+			    height: 400px;
+			    position: absolute;
+			    backdrop-filter: blur(5px);
+			    transition: all .3s linear;
+				transition-delay: .5s;
+			}
+
+			h2 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #fff;
+				font-family: $lato;
+				font-size: 42px;
+				line-height: 1;
+				transition: all .3s linear;
+				transition-delay: .5s;
+			}
+		}
+	}
+}
